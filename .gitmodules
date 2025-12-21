@@ -1,0 +1,12 @@
+[submodule "inc/WWW-AdventCalendar"]
+	path = inc/WWW-AdventCalendar
+	url = https://github.com/perladvent/WWW-AdventCalendar.git
+[submodule "inc/Pod-Elemental-Transformer-SynHi"]
+	path = inc/Pod-Elemental-Transformer-SynHi
+	url = https://github.com/perladvent/Pod-Elemental-Transformer-SynHi.git
+[submodule "inc/vim-perl"]
+	path = inc/vim-perl
+	url = https://github.com/vim-perl/vim-perl.git
+[submodule "inc/PPI-HTML"]
+	path = inc/PPI-HTML
+	url = https://github.com/perladvent/PPI-HTML.git

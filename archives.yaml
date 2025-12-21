@@ -1128,3 +1128,111 @@
   - { "module" : "Chart::Bars" }
   25:
   - { "module" : "Perl::Dist::APPerl" }
+
+2023:
+  01:
+  - { "module" : "Music::MelodicDevice::Ornamentation" }
+  02:
+  - { "module" : "Bitcoin::Crypto" }
+  03:
+  - { "module" : "Bitcoin::Crypto" }
+  04:
+  - { "module" : "builtin" }
+  05:
+  - { "module" : "HTMX" }
+  06:
+  - { "module" : "Arango::Tango" }
+  07:
+  - { "module" : "Catalyst::Plugin::CheckFileUploadTypes" }
+  08:
+  - { "module" : "GUIDeFATE" }
+  09:
+  - { "module" : "Mooish::AttributeBuilder" }
+  10:
+  - { "module" : "App::Timer" }
+  11:
+  - { "module" : "DBIx::Class::Helpers" }
+  12:
+  - { "module" : "perl" }
+  13:
+  - { "module" : "Dispatch::Fu" }
+  14:
+  - { "module" : "use" }
+  15:
+  - { "module" : "Testing" }
+  16:
+  - { "module" : "Testing" }
+  17:
+  - { "module" : "Sub::Genius" }
+  18:
+  - { "module" : "Audio::Nama" }
+  20:
+  - { "module" : "ENV::Util" }
+  21:
+  - { "module" : "https://crates.io/crates/typos" }
+  22:
+  - { "module" : "Util::H2O::More" }
+  23:
+  - { "module" : "App::perlimports" }
+  24:
+  - { "module" : "FFI::Platypus" }
+  25:
+  - { "module" : "Date::Christmas" }
+
+2024:
+  01:
+  - { "module" : "MooseX::Extended" }
+  02:
+  - { "module" : "HTTP::XSHeaders" }
+  - { "module" : "URI::XSEscape" }
+  - { "module" : "HTTP::XSCookies" }
+  03:
+  - { "module" : "Ref::Util" }
+  04:
+  - { "topic" : "GitHub Actions" }
+  05:
+  - { "module" : "Data::Rx" }
+  06:
+  - { "module" : "OpenAI::API" }
+  07:
+  - { "module" : "Parallel::ForkManager" }
+  08:
+  - { "module" : "Feature::Compat::Class" }
+  09:
+  - { "module" : "XML::Twig" }
+  10:
+  - { "module" : "e" }
+  11:
+  - { "module" : "Map::Tube" }
+  12:
+  - { "topic" : "Methodology" }
+  - { "topic" : "standups" }
+  - { "topic" : "mental health" }
+  - { "module" : "Object::Pad" }
+  - { "module" : "App::Standup::Diary" }
+  13:
+  - { "module" : "Net::Clacks" }
+  14:
+  - { "module" : "Valiant" }
+  15:
+  - { "topic" : "GitHub actions" }
+  16:
+  - { "module" : "Inline::C" }
+  17:
+  - { "topic" : "Natural Language Processing" }
+  - { "topic" : "Graph Visualisation" }
+  18:
+  - { "topic" : "OpenTelemetry" }
+  - { "topic" : "Observability" }
+  20:
+  - { "topic" : "Randal Schwartz" }
+  21:
+  - { "module" : "Module::None" }
+  22:
+  - { "module" : "OpenMP" }
+  23:
+  - { "module" : "Perl::Version::Bumper" }
+  24:
+  - { "topic" : "Camel" }
+  25:
+  - { "topic" : "Merry Christmas, bless us, everyone" }

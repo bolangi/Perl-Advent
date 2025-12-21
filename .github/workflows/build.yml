@@ -23,45 +23,41 @@ concurrency:
 
 jobs:
   build:
+    if: github.repository == 'perladvent/Perl-Advent'
     name: Build and deploy site
     runs-on: ubuntu-latest
-    if: github.repository == 'perladvent/Perl-Advent'
-    container:
-      image: perldocker/perl-tester:5.36
     steps:
-      - uses: actions/checkout@v4
-      - name: 🐧 Install vim for Text-VimColor
-        run: apt-get install -y vim
-      - name: 🧅 Install deps using cpm
-        uses: perl-actions/install-with-cpm@v1
+      - uses: actions/checkout@v6
         with:
-          cpanfile: 'cpanfile'
-          sudo: false
+          submodules: true
 
-      - uses: actions/checkout@v4
-        name: 🗓️ Clone forked WWW-AdventCalendar
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: 🐳 Build Docker image
+        uses: docker/bake-action@v6
         with:
-          repository: perladvent/WWW-AdventCalendar
-          ref: perladvent
-          path: WWW-AdventCalendar
-      - name: 🍴Install Forked WWW-AdventCalendar
-        run: >
-          cd WWW-AdventCalendar &&
-          dzil authordeps | xargs cpm install -g &&
-          dzil install
+          files: docker-compose.yml
+          load: true
+          set: |
+            *.cache-from=type=gha
+            *.cache-to=type=gha,mode=max
 
       - name: 👉 Remove placeholder screen in Dec and Jan
-        run: bash script/deploy/splash-screen.sh
+        run: docker compose run --rm perl-advent bash script/deploy/splash-screen.sh
 
       - name: 📚 Build articles
-        run: bash script/build-site.sh
+        run: docker compose run --rm perl-advent
+
+      - name: 📦 Copy built site from Docker volume to host
+        run: docker compose run --rm perl-advent cp -r /app/out /app/out-ci
 
       - name: Set up pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: 'out'  # entire repo
+          path: 'out-ci'
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
